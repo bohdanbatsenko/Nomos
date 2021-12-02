@@ -1,31 +1,83 @@
 .header
 	margin-top: 50px
 	min-height: 113px
-	.logo
-		margin-top: 43px
-		display: inline-block
-	.menu
-		margin-top: 48px
-		list-style-type: none
-		li
-			display: inline-flex
-			margin-right: 90px
-			&:last-child
-				margin-right: 0
-			a
-				display: inline-flex
-				font-size: 18px
-				text-decoration: none
-			&:nth-child(3)
-				box-sizing: border-box
-				a
-					display: inline-block
-					box-sizing: border-box
-					background: -webkit-linear-gradient(#8a95d1, #5a0293)
-					-webkit-background-clip: text
-					-webkit-text-fill-color: transparent
-					border-radius: 5px
-					padding: 0 20px
-					box-shadow: -1px -1px 0 1px rgb(#8a95d1,0.25), -1px -1px 0 1px rgb(#8a95d1,0.25), 0 -1px 0 1px rgb(#8a95d1,0.5), 0 1px 0 1px rgb(#8a95d1,0.5), 1px -1px 0 1px rgba(#5a0293,0.25), 1px 1px 0 1px rgb(#5a0293,0.25), 1px 0 0 1px rgb(#5a0293,0.75)
+	.header-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo
+			margin-top: 5px
+			display: inline-block
+		.nav-menu
+			margin-top: 48px
+			.menu
+				list-style-type: none
+				li
+					display: inline-flex
+					margin-right: 90px
+					&:last-child
+						margin-right: 0
+					a
+						display: inline-flex
+						font-size: 18px
+						text-decoration: none
+					&:nth-child(3)
+						box-sizing: border-box
+						a
+							display: inline-block
+							box-sizing: border-box
+							background: -webkit-linear-gradient(#8a95d1, #5a0293)
+							-webkit-background-clip: text
+							-webkit-text-fill-color: transparent
+							border-radius: 5px
+							padding: 0 20px
+							box-shadow: -1px -1px 0 1px rgb(#8a95d1,0.25), -1px -1px 0 1px rgb(#8a95d1,0.25), 0 -1px 0 1px rgb(#8a95d1,0.5), 0 1px 0 1px rgb(#8a95d1,0.5), 1px -1px 0 1px rgba(#5a0293,0.25), 1px 1px 0 1px rgb(#5a0293,0.25), 1px 0 0 1px rgb(#5a0293,0.75)
 
+@media screen and (max-width: 992px)
+	.header
+		padding-left: 20px
+		padding-right: 20px
+	.nav-menu
+		width: 100%
+	.m-menu
+		display: inline-block
+		position: absolute
+		top: 35px
+		right: 20px
+		z-index: 9
+		transform: translateY(50%)
+	ul.menu
+		width: 100%
+		background: #fff
+		position: absolute
+		right: 0
+		top: 0
+		//left: 0
+		margin-top: 160px
+		//margin-right: 32px
+		display: flex
+		flex-direction: column
+		z-index: 9
+		opacity: 0
+		padding: 30px
+		font-size: 20px
+		visibility: hidden
+		text-align: center
+		backface-visibility: hidden
+		transform: translateY(-20%)
+		transition: transform .3s ease-in-out, opacity .1s
+		a
+			margin-top: 20px
+		&.menu-open
+			transform: translateY(0)
+			visibility: visible
+			opacity: 1
+			z-index: 99
+			padding-left: 52px
+		// li.menu-link
+		// 	display: inline-block
+		// 	width: 100%
+		// 	text-align: center
+		// 	margin-left: 0
+		// 	margin-bottom: 16px
 

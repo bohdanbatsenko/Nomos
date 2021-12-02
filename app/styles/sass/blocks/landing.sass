@@ -14,7 +14,7 @@
 		align-items: center
 		&-wrapper
 			display: flex
-			align-items: end
+			align-items: flex-end
 			z-index: 2
 			height: 50px
 		&-text_large,
@@ -40,7 +40,6 @@
 			position: relative			
 			z-index: 1
 			@media screen and (max-width: 992px)
-				//min-width: calc(100vw/2)
 				left: -60%
 			@media screen and (max-width: 768px)
 				min-width: calc(100vw/1.5)
@@ -49,6 +48,8 @@
 				min-width: calc(100vw/1.2)
 				left: -80%
 	.hero-main-title
+		@media screen and (max-width: 768px)
+			margin-top: 40px
 		&-text
 			font-size: 105px
 			color: #fff
@@ -58,8 +59,6 @@
 				font-size: 85px
 			@media screen and (max-width: 992px)
 				font-size: 60px
-
-
 .hero-bottom
 	margin-top: 200px
 	padding-bottom: 80px
@@ -70,6 +69,9 @@
 	&-right
 		display: flex
 		justify-content: flex-end
+		@media screen and (max-width: 768px)
+			margin-top: 50px
+			justify-content: flex-start
 		img
 			display: inline-block
 			width: auto
@@ -95,7 +97,7 @@
 		&-text
 			padding-bottom: 18px
 			max-width: 70%
-			font-size: 20px
+			font-size: 18px
 	&-hands-phone
 		// background-size: cover
 		// background-position: center center
@@ -113,12 +115,14 @@
 	&-right
 		display: flex
 		justify-content: flex-end
+		@media screen and (max-width: 768px)
+			justify-content: flex-start
 		img
 			max-width: 350px
 
 
 .s-infinite
-	padding: 35px 0
+	padding: 65px 0
 	overflow: hidden
 	position: relative
 	&-logos
@@ -129,10 +133,6 @@
 		img
 			width: 100px
 			height: auto
-			// display: inline-block
-			// width: 100px
-			// margin-right: 10px
-			// padding-right: 0
 			object-fit: contain
 			max-height: 80px			
 
@@ -148,12 +148,12 @@
 
 		
 .s-app
-	padding: 35px 0
+	padding: 65px 0
 	&-text
 		margin-top: 18%
 		&-title
 			margin-bottom: 30px
-			h2
+			.s-app-title
 				font-size: 85px
 				line-height: .8
 		&-descr
@@ -177,10 +177,331 @@
 					margin-right: 0
 
 
+.s-ground-plan
+	padding: 65px 0
+	background: #eff1f2
+	&-text
+		margin-top: 20%
+		padding-bottom: 20px
+		&-title
+			.ground-title
+				font-size: 40px
+				.italic
+					font-family: 'sabon-italic'	
+	&-text-descr
+		font-size: 18px
+		padding-bottom: 18px
+		max-width: 70%
 
 
 
+.s-scenes
+	padding-top: 65px
+	padding-bottom: 250px
+	@media screen and (max-width: 768px)
+		padding-bottom: 600px
+	&-text
+		margin-top: 18%
+		&-title
+			margin-bottom: 30px
+			.s-scenes-title
+				font-size: 85px
+				line-height: .8
+		&-descr
+			max-width: 60%
+			font-size: 18px
+		.tabs-list
+			margin-top: 40px
+			margin-left: 0
+			padding-left: 0
+			li
+				display: inline-block
+				list-style-type: none
+				margin-right: 20px
+				margin-top: 20px
+				.tabs-list__item
+					display: inline-block
+					color: #bfc9ca
+					border: 1px solid #bfc9ca
+					border-radius: 10px
+					background: transparent
+					font-size: 18px
+					text-align: left
+					width: 140px
+					padding: 5px 10px
+					line-height: 25px
+					.italic
+						font-family: 'sabon-italic'
+					&.tabs-list__item_active
+						box-sizing: border-box
+						background: -webkit-linear-gradient(#8a95d1, #5a0293)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+
+						box-shadow: -1px -1px 0 1px rgb(#8a95d1,0.25), -1px -1px 0 1px rgb(#8a95d1,0.25), 0 -1px 0 1px rgb(#8a95d1,0.5), 0 1px 0 1px rgb(#8a95d1,0.5), 1px -1px 0 1px rgba(#5a0293,0.25), 1px 1px 0 1px rgb(#5a0293,0.25), 1px 0 0 1px rgb(#5a0293,0.75)						
+
+	&-composition-wrapper
+		margin-top: 12%
+		padding: 35px 0
+		position: relative
+
+		.scenes-composition-abs
+			position: absolute
+			top: 0
+			left: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			.scene-phone
+				margin-right: 40px
+				position: relative
+				&::after
+					content: ""
+					display: block
+					position: absolute
+					width: 100px
+					height: 100px
+					top: 38%
+					right: -70px
+					background: url(/images/dist/szenes/szenes-divider.png)
+					background-position: center center
+					background-repeat: no-repeat
+					background-size: contain
+					z-index: 2
+			.scene-images-wrapper
+				display: flex
+				position: relative
+				.scene-img-left,
+				.scene-img-right
+					display: flex
+					flex-direction: column
+					position: absolute
+					height: 454px
+					img
+						object-fit: cover
+						margin-bottom: 80px
+	
+				.scene-img-left
+					margin-right: 40px
+					position: relative
+					transform: translateY(26%)
+					left: 0
+					&::after
+						content: ""
+						display: block
+						position: absolute
+						width: 100px
+						height: 100px
+						top: 13%
+						right: -70px
+						background: url(/images/dist/szenes/szenes-divider.png)
+						background-position: center center
+						background-repeat: no-repeat
+						background-size: contain
+						z-index: 2
+					&::before
+						content: ""
+						position: absolute
+						display: block
+						bottom: 35%
+						left: 50%
+						width: 2px
+						height: 60px
+						background: #000
+						z-index: 10
+
+				.scene-img-right
+					right: -90%
+					transform: translateY(26%)
+					z-index: -1
+					&::before
+						content: ""
+						position: absolute
+						display: block
+						bottom: 35%
+						left: 50%
+						width: 2px
+						height: 60px
+						background: #000
+						z-index: 10					
+				.descr
+					position: relative
+					align-self: center
+					line-height: 20px
+					padding-left: 25px
+					padding-right: 0
+					padding-top: 0
+					margin: 0
 
 
 
+.s-integration
+	background-position: 550px center
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: #e7e9eb
+	@media screen and (max-width: 1400px)
+		background-position: 380px center
+	@media screen and (max-width: 1220px)
+		background-position: 320px center
+	@media screen and (max-width: 992px)
+		background-position: 150px center
+	@media screen and (max-width: 768px)
+		background-position: 20px center
+	&-wrapper
+		margin-top: 20%
+		padding-bottom: 20px
+		.s-integration-text-title
+			.integration-title
+				font-size: 40px
+				.italic
+					font-family: 'sabon-italic'	
 
+		.s-integration-composition
+			margin-top: 40px
+			.comp-item
+				display: flex
+				justify-content: center
+				flex-direction: column
+				@media screen and (max-width: 768px)
+					margin-bottom: 50px
+				.comp-image
+					height: 250px
+					position: relative
+					@media screen and (max-width: 768px)
+						height: 190px
+
+					&::after
+						content: " "
+						position: absolute
+						display: block
+						top: 25%
+						right: 0
+						font-size: 80px
+						font-weight: 300
+						background-image: url(/images/dist/plus.svg)
+						width: 55px
+						height: 55px
+						@media screen and (max-width: 768px)
+							display: none
+					img
+						max-width: 120px
+						position: relative
+						&.pwrsupply
+							margin-top: 25px
+							width: 120px
+							display: block
+					.abs-circle-holder
+						position: absolute
+						top: -20%
+						right: 15%
+						width: 100px
+						height: 100px
+						border-radius: 50%
+						line-height: .9
+						background: -webkit-linear-gradient(45deg,#fa97a4, #efc8b5)
+						display: flex
+						justify-content: center
+						align-items: center
+						@media screen and (max-width: 768px)
+							top: 0
+							right: 200px
+						.abs-text
+							font-size: 18px
+							line-height: 18px
+							text-align: center
+					&.pwrsupply
+						@media screen and (max-width: 768px)
+
+				.comp-descr
+					max-width: 180px
+					&-title
+						font-size: 20px
+						font-family: 'degular-semibold', sans-serif
+						margin-bottom: 20px
+					&-text
+						font-size: 18px
+						line-height: 20px
+				.integration-circle-wrapper
+					height: 250px
+					.integration-circle
+						height: 190px
+						min-width: 190px
+						border-radius: 50%
+						color: black
+						border: 2px solid #000
+						line-height: .9
+						display: inline-flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						position: relative
+						.abs-holder
+							display: flex
+							flex-direction: column
+							justify-content: center
+							align-items: center
+							display: inline-flex
+							@media (max-width:992)
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translate(-50%,-50%)
+						@media (max-width:1200)
+							height: 156px
+							min-width: 156px
+						@media (max-width:992)
+							margin-bottom: 15px
+							width: 100%
+							padding-bottom: 100%
+						.save
+							font-size: 18px
+							text-transform: uppercase
+						.percent
+							font-size: 80px
+							font-weight: 900
+							@media (max-width:1200)
+								font-size: 48px
+								@media (max-width:992)
+									font-size: 100px						
+
+
+.s-cta
+	padding: 65px 0
+	background: #f7ebdd
+	.cta-button-wrapper
+		padding: 30px 0
+		display: flex
+		justify-content: center
+		.cta-button
+			display: inline-block
+			padding: 10px 55px
+			background: -webkit-linear-gradient(45deg,#5b0594, #8992d0)
+			border-radius: 5px
+			color: #fff
+			font-size: 40px
+			text-decoration: none
+	.cta-sunrise-wrapper
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+		align-items: flex-end
+		.cta-sunrise-text
+			font-size: 18px
+			line-height: 18px
+			margin-right: 15px
+		.cta-sunrise-logo
+			width: auto
+
+.s-order
+	padding: 65px 0
+	.s-order-wrapper
+		display: flex
+		justify-content: center
+		.order-link
+			font-size: 40px
+			text-decoration: none
+			display: inline-block
+			background: -webkit-linear-gradient(-45deg, #8a95d1, #5a0293)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent

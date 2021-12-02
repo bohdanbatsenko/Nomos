@@ -6,27 +6,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nomos - homepage</title>
 	<link rel="stylesheet" href="css/app.min.css">
+	<script src="js/app.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 
 		<header class="header">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
+				<div class="header-top">
+
 						<a href="" class="logo">
 							<img src="images/dist/logo.png" alt="nomos-logo">
 						</a>
-					</div>
-					<div class="col-md-7">
+
+
+						<nav class="nav-menu">
+							<div class="m-menu nav-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>							
 						<ul class="menu">
 							<li><a href="" class="menu-link">Produktfreiheit</a></li>
 							<li><a href="" class="menu-link">Funktionen</a></li>
 							<li><a href="" class="menu-link effect">Integration</a></li>
 							<li><a href="" class="menu-link">Kontakt</a></li>
 						</ul>
-					</div>
-					<div class="col-md-3"></div>
+					</nav>
+
+					<div class="header-right"></div>
 				</div>
 			</div>
 		</header>
@@ -127,7 +135,7 @@
 			<div class="col-md-5">
 				<div class="s-app-text">
 					<div class="s-app-text-title">
-						<h2>
+						<h2 class="s-app-title">
 						Eine<br>
 						App.
 					</h2>
@@ -153,6 +161,279 @@
 		</div>
 	</div>
 </section>
+
+
+<section class="s-ground-plan">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="s-ground-plan-text">
+					<div class="s-ground-plan-text-title">
+						<h2 class="ground-title">
+							Mach Smart,<br><span class="italic">was schon<br>da ist.</span>
+						</h2>
+					</div>
+					<div class="s-ground-plan-text-descr">
+							Smart-Home ohne Baustelle: Lichtschalter und Jalousien werden von uns per Funkmodul angeschlossen. Alle anderen Wireless-fähigen Geräte können sofort verbunden werden. Klingt einfach, oder? Ist es auch.
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-7 ">
+				<div class="s-ground-plan-img">
+					<img src="images/dist/ground-plan4.png" alt="">
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="s-scenes">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="s-scenes-text">
+					<div class="s-scenes-text-title">
+						<h2 class="s-scenes-title">
+							Bleib im<br>
+							Flow.
+					</h2>
+					</div>
+					<div class="s-scenes-text-descr">
+						Nomos bietet dir die Möglichkeit mit Szenen automatische
+						Abläufe zu kreieren.
+					</div>
+
+					<ul class="tabs-list">
+						<li>
+							<button type="button" class="tabs-list__item tabs-list__item_active" data-tabs-handler="morgen">Szene<br><span class="italic">Guten Morgen</span></button>
+						</li>
+						<li>
+							<button type="button" class="tabs-list__item" data-tabs-handler="arbeit">Szene<br><span class="italic">Zur Arbeit</span></button>
+						</li>
+						<li>
+							<button type="button" class="tabs-list__item" data-tabs-handler="feierabend">Szene<br><span class="italic">
+							Feierabend</span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-7">
+
+				<div class="s-scenes-composition-wrapper">
+					<div class="scenes-composition-abs">
+						<div class="scene-phone" data-tabs-field="morgen">
+							<img src="images/dist/szenes/szene1_phone.png" alt="">
+					</div>
+						<div class="scene-phone hidden" data-tabs-field="arbeit">
+							<img src="images/dist/szenes/szene2_phone.png" alt="">
+					</div>
+						<div class="scene-phone hidden" data-tabs-field="feierabend">
+							<img src="images/dist/szenes/szene3_phone.png" alt="">
+					</div>
+					<div class="scene-images-wrapper">
+						<div class="scene-img-left">
+							<img src="images/dist/szenes/szene1_photo_left.png" class="" data-tabs-field="morgen" alt="">
+							<img src="images/dist/szenes/szene2_photo_left.png" class="hidden" data-tabs-field="arbeit" alt="">
+							<img src="images/dist/szenes/szene3_photo_left.png" class="hidden" data-tabs-field="feierabend" alt="">
+							<div class="descr descr-left" data-tabs-field="morgen">7:30 Uhr.<br>
+								Der Wecker klingelt.</div>
+							<div class="descr descr-left hidden" data-tabs-field="arbeit">
+								Auf dem Weg zur Arbeit.
+							</div>
+							<div class="descr descr-left hidden" data-tabs-field="feierabend">
+								Die letzte Mail im Büro<br>ist verschickt.
+							</div>
+						</div>
+						<div class="scene-img-right">
+							<img src="images/dist/szenes/szene1_photo_right.png" class="" data-tabs-field="morgen" alt="">
+							<img src="images/dist/szenes/szene2_photo_right.png" class="hidden" data-tabs-field="arbeit" alt="">
+							<img src="images/dist/szenes/szene3_photo_right.png" class="hidden" data-tabs-field="feierabend" alt="">
+							<div class="descr descr-right" data-tabs-field="morgen">
+								Der Kaffee brüht.<br>
+								Die Jalousien summen.<br>
+								Die Lichter dimmen.<br>
+								Die Musik spielt leise.<br>
+								Guten Morgen.								
+							</div>
+							<div class="descr descr-right hidden" data-tabs-field="arbeit">
+								Der Saugroboter wacht auf.<br>
+								Die Spühlmaschine läuft an.<br>
+								Die Sprinkleranlage bewässert.<br>
+								Guten Start in den Tag.
+							</div>
+							<div class="descr descr-right hidden" data-tabs-field="feierabend">
+								Die Sauna Zuhause heizt vor.<br>
+								Schönen Feierabend.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			</div><!--col-md-->
+		</div><!--row-->
+	</div><!--container-->
+</section>
+
+
+<section class="s-integration" style="background-image: url('images/dist/electrician.png');">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="s-integration-wrapper">
+					<div class="s-integration-text-title">
+						<h2 class="integration-title">
+							Wir integrieren<br>
+							nomos schnell 
+							<span class="italic">&<br>
+							ohne Baustelle.</span>
+						</h2>
+					</div>
+
+					<div class="s-integration-composition">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="comp-item">
+									<div class="comp-image phone">
+										<img src="images/dist/integration-phone.png" class="" alt="integration-phone">
+									</div>
+									<div class="comp-descr">
+										<div class="comp-descr-title">nomos Controller</div>
+										<div class="comp-descr-text">
+											Der handliche Controllerist das Herzstück von nomos. 
+											Dieser wird einfach an dein
+											Netzwerk (z.B. Router)
+											angeschlossen.											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="comp-item">
+									<div class="comp-image pwrsupply">
+										<img src="images/dist/integration-pwrsupply.png" class="pwrsupply" alt="integration-pwrsupply">
+										<div class="abs-circle-holder">
+											<div class="abs-text">
+												Bis zu<br>
+												15 Stück
+											</div>
+										</div>
+									</div>
+									<div class="comp-descr">
+										<div class="comp-descr-title">Funkmodule</div>
+										<div class="comp-descr-text">
+											Diese  werden einfach
+											hinter Licht- oder
+											Jalousienschaltern
+											verbaut und machen
+											diese damit ansteuerbar.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="comp-item">
+									<div class="integration-circle-wrapper">
+									<div class="integration-circle">
+										<div class="abs-holder">
+											<div class="save">Circa</div>
+											<div class="percent">5h</div>						
+										</div>										
+									</div>
+								</div>
+									<div class="comp-descr">
+										<div class="comp-descr-title">Installation</div>
+										<div class="comp-descr-text">
+											Wir kommen zu dir
+											nach Hause und inte-
+											grieren nomos an ca.
+											einem halben Tag – ab
+											dann kannst du nomos
+											selbst gestalten und mit
+											neuen Geräten erweitern.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>	
+			</div>
+			<div class="col-md-5">
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="s-cta">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="cta-button-wrapper">
+				<a href="#" class="cta-button">
+					Jetzt beim Gewinnspiel mitmachen →
+				</a>
+			</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-9"></div>
+			<div class="col-md-3">
+				<div class="cta-sunrise-wrapper">
+					<div class="cta-sunrise-text">In Kooperation mit</div>
+					<div class="cta-sunrise-logo">
+						<img src="images/dist/sunrise-logo.png" alt="sunrise-logo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="s-order">
+	<div class="container">
+		<div class="s-order-wrapper">
+			<a href="#" class="order-link">
+			Oder mehr über nomos erfahren →
+		</a>
+		</div>
+	</div>
+</section>
+
+
+
+
+<footer class="site-footer" style="background-image: url('images/dist/footer_bg.png');">
+		<div class="container">
+			<div class="footer-wrapper">
+
+				<a href="" class="logo">
+					<img src="images/dist/logo-light.png" alt="nomos-logo">
+				</a>
+
+				<nav class="footer-menu">
+				<ul class="footer-menu-list">
+					<li><a href="" class="menu-link">© 2020 nomos system AG</a></li>
+					<li><a href="" class="menu-link">Impressum</a></li>
+					<li><a href="" class="menu-link effect">AGB</a></li>
+					<li><a href="" class="menu-link"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+				</ul>
+			</nav>
+
+				<div class="footer-button-wrapper">
+					<a href="#" class="footer-button">Nach Oben</a>
+				</div>
+			</div>
+		</div>
+		</footer>
+</footer>
+
+
+
+
+
 
 
 	</div><!--wrapper-->
