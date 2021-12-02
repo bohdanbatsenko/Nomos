@@ -1,0 +1,80 @@
+*
+	&:before,
+	&:after
+		box-sizing: border-box
+	
+	// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #000 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: degular-regular, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+//@import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('degular-regular', normal, 400, '../fonts/Degular/Degular-Regular.woff2')
+@include font('degular-semibold', normal, 500, '../fonts/Degular/Degular-Semibold.woff2')
+@include font('sabon-italic', normal, 400, '../fonts/SabonLTPro/SabonLTPro-Italic.woff2')
+@include font('sabon-roman', normal, 500, '../fonts/SabonLTPro/SabonLTPro-Roman.woff2')
+
+	
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+a
+	color: #000
+.img-responsive
+	display: block
+	width: 100%
+	max-width: 100%
+	height: auto
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	//overflow-x: hidden
+.wrapper
+	min-height: 100%
+	min-width: 100%
+	//max-width: 1440px
+	overflow-x: hidden
+	position: relative
+
+@media (min-width: 1200px)
+	.container
+		width: 1440px
