@@ -1,0 +1,160 @@
+.s-hero
+	padding-top: 60px
+	width: 100%
+	height: 100%
+	min-height: 80vh
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	.s-hero-abs
+		color: #fff
+		position: relative
+		display: flex
+		align-items: center
+		&-wrapper
+			display: flex
+			align-items: end
+			z-index: 2
+			height: 50px
+		&-text_large,
+		&-text_small
+			display: inline-flex
+		&-text_large
+			font-size: 60px
+			line-height: 60px
+		&-text_small
+			line-height: inherit
+			margin-right: 20px
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			left: -50%
+			bottom: 0
+			right: 0
+			display: block
+			min-height: 120px
+			min-width: calc(100vw/2)
+			background: -webkit-linear-gradient(45deg,#ab1838, #f9c702)
+			position: relative			
+			z-index: 1
+			@media screen and (max-width: 992px)
+				//min-width: calc(100vw/2)
+				left: -60%
+			@media screen and (max-width: 768px)
+				min-width: calc(100vw/1.5)
+				left: -80%
+			@media screen and (max-width: 576px)
+				min-width: calc(100vw/1.2)
+				left: -80%
+	.hero-main-title
+		&-text
+			font-size: 105px
+			color: #fff
+			.italic
+				font-family: 'sabon-italic'
+			@media screen and (max-width: 1400px)
+				font-size: 85px
+			@media screen and (max-width: 992px)
+				font-size: 60px
+
+
+.hero-bottom
+	margin-top: 200px
+	padding-bottom: 80px
+	&-left
+		color: #fff
+		font-size: 20px
+	&-right
+		display: flex
+		justify-content: flex-end
+		img
+			display: inline-block
+			width: auto
+			margin-right: 20px
+			padding-right: 0
+			object-fit: contain
+			height: 70px
+
+
+
+.s-conecte
+	background: #f59c94
+	padding: 8% 0
+	overflow: hidden
+	position: relative
+	&-left
+		margin-top: 20%
+		padding-bottom: 20px
+		&-title
+			font-size: 40px
+			.italic
+				font-family: 'sabon-italic'	
+		&-text
+			padding-bottom: 20px
+			max-width: 70%
+			font-size: 20px
+	&-hands-phone
+		// background-size: cover
+		// background-position: center center
+		// background-repeat: no-repeat
+		// height: 300px
+		img
+			position: absolute
+			bottom: 0
+			left: 30%
+			width: 30%
+			@media screen and (max-width: 992px)
+				width: 50%
+			@media screen and (max-width: 768px)
+				display: none
+	&-right
+		display: flex
+		justify-content: flex-end
+		img
+			max-width: 350px
+
+
+.s-infinite
+	padding: 35px 0
+	overflow: hidden
+	position: relative
+	&-logos
+		display: flex
+		animation: scroll 20s linear infinite
+		justify-content: space-between
+		width: calc(200px * 11)
+		img
+			width: 100px
+			height: auto
+			// display: inline-block
+			// width: 100px
+			// margin-right: 10px
+			// padding-right: 0
+			object-fit: contain
+			max-height: 80px			
+
+//infinite scroll carousel css
+//https://codepen.io/studiojvla/pen/qVbQqW
+	//https://codepen.io/abhikb/pen/yLgMvGw
+@keyframes scroll
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(calc(-100px*11))
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
